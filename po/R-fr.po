@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: class 7.2-20\n"
 "Report-Msgid-Bugs-To: bugs@r-project.org\n"
-"POT-Creation-Date: 2005-02-19 12:33\n"
+"POT-Creation-Date: 2007-12-16 12:02\n"
 "PO-Revision-Date: 2005-12-07 23:46+0100\n"
 "Last-Translator: Philippe Grosjean <phgrosjean@sciviews.org>\n"
 "Language-Team: French <R-core@r-project.org>\n"
@@ -57,3 +57,9 @@ msgstr "'prior' est de longueur incorrecte"
 
 msgid "retained set is now too small to proceed"
 msgstr "l'ensemble retenu est maintenant trop petit pour continuer"
+
+msgid "pass"
+msgstr ""
+
+msgid "size"
+msgstr ""

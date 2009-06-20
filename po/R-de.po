@@ -46,9 +46,6 @@ msgstr "k = %d überschreitet die Zahl %d der Muster"
 msgid "k = %d must be at least 1"
 msgstr "k = %d muss mindestens 1 sein"
 
-msgid "dims of 'test' and 'train differ"
-msgstr "Abmessungen von »test« und »train« sind unterschiedlich"
-
 msgid "'x' and 'cl' have different lengths"
 msgstr "»x« und »cl« haben unterschiedliche Längen"
 
@@ -66,3 +63,6 @@ msgstr "bestehen"
 
 msgid "size"
 msgstr "Größe"
+
+#~ msgid "dims of 'test' and 'train differ"
+#~ msgstr "Abmessungen von »test« und »train« sind unterschiedlich"
