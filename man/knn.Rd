@@ -45,7 +45,7 @@ largest are included. If false, a random selection of distances
 equal to the \code{k}th is chosen to use exactly \code{k} neighbours.
 }}
 \value{
-factor of classifications of test set. \code{doubt} will be returned as \code{NA}.
+Factor of classifications of test set. \code{doubt} will be returned as \code{NA}.
 }
 \references{
   Ripley, B. D. (1996)

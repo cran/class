@@ -31,7 +31,7 @@ patterns are added to the store set. The whole set is checked until
 no additions occur.
 }
 \value{
-index vector of cases to be retained (the final store set).
+Index vector of cases to be retained (the final store set).
 }
 \references{
 P. A. Devijver and J. Kittler (1982)

@@ -1,5 +1,5 @@
 
-R version 2.9.1 RC (2009-06-18 r48797)
+R version 2.10.0 Patched (2009-11-23 r50545)
 Copyright (C) 2009 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
 
@@ -17,79 +17,14 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-> ### * <HEADER>
-> ###
-> attach(NULL, name = "CheckExEnv")
-> assign("nameEx",
-+        local({
-+ 	   s <- "__{must remake R-ex/*.R}__"
-+            function(new) {
-+                if(!missing(new)) s <<- new else s
-+            }
-+        }),
-+        pos = "CheckExEnv")
-> ## Add some hooks to label plot pages for base and grid graphics
-> assign("base_plot_hook",
-+        function() {
-+            pp <- par(c("mfg","mfcol","oma","mar"))
-+            if(all(pp$mfg[1:2] == c(1, pp$mfcol[2]))) {
-+                outer <- (oma4 <- pp$oma[4]) > 0; mar4 <- pp$mar[4]
-+                mtext(sprintf("help(\"%s\")", nameEx()), side = 4,
-+                      line = if(outer)max(1, oma4 - 1) else min(1, mar4 - 1),
-+                outer = outer, adj = 1, cex = .8, col = "orchid", las=3)
-+            }
-+        },
-+        pos = "CheckExEnv")
-> assign("grid_plot_hook",
-+        function() {
-+            grid::pushViewport(grid::viewport(width=grid::unit(1, "npc") -
-+                               grid::unit(1, "lines"), x=0, just="left"))
-+            grid::grid.text(sprintf("help(\"%s\")", nameEx()),
-+                            x=grid::unit(1, "npc") + grid::unit(0.5, "lines"),
-+                            y=grid::unit(0.8, "npc"), rot=90,
-+                            gp=grid::gpar(col="orchid"))
-+        },
-+        pos = "CheckExEnv")
-> setHook("plot.new",     get("base_plot_hook", pos = "CheckExEnv"))
-> setHook("persp",        get("base_plot_hook", pos = "CheckExEnv"))
-> setHook("grid.newpage", get("grid_plot_hook", pos = "CheckExEnv"))
-> assign("cleanEx",
-+        function(env = .GlobalEnv) {
-+ 	   rm(list = ls(envir = env, all.names = TRUE), envir = env)
-+            RNGkind("default", "default")
-+ 	   set.seed(1)
-+    	   options(warn = 1)
-+ 	   .CheckExEnv <- as.environment("CheckExEnv")
-+ 	   delayedAssign("T", stop("T used instead of TRUE"),
-+ 		  assign.env = .CheckExEnv)
-+ 	   delayedAssign("F", stop("F used instead of FALSE"),
-+ 		  assign.env = .CheckExEnv)
-+ 	   sch <- search()
-+ 	   newitems <- sch[! sch %in% .oldSearch]
-+ 	   for(item in rev(newitems))
-+                eval(substitute(detach(item), list(item=item)))
-+ 	   missitems <- .oldSearch[! .oldSearch %in% sch]
-+ 	   if(length(missitems))
-+ 	       warning("items ", paste(missitems, collapse=", "),
-+ 		       " have been removed from the search path")
-+        },
-+        pos = "CheckExEnv")
-> assign("ptime", proc.time(), pos = "CheckExEnv")
-> ## at least one package changes these via ps.options(), so do this
-> ## before loading the package.
-> ## Use postscript as incomplete files may be viewable, unlike PDF.
-> ## Choose a size that is close to on-screen devices, fix paper
-> grDevices::ps.options(width = 7, height = 7, paper = "a4", reset = TRUE)
-> grDevices::postscript("class-Ex.ps")
-> 
-> assign("par.postscript", graphics::par(no.readonly = TRUE), pos = "CheckExEnv")
-> options(contrasts = c(unordered = "contr.treatment", ordered = "contr.poly"))
+> pkgname <- "class"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
 > options(warn = 1)
 > library('class')
 > 
 > assign(".oldSearch", search(), pos = 'CheckExEnv')
-> assign(".oldNS", loadedNamespaces(), pos = 'CheckExEnv')
-> cleanEx(); nameEx("SOM")
+> cleanEx()
+> nameEx("SOM")
 > ### * SOM
 > 
 > flush(stderr()); flush(stdout())
@@ -118,7 +53,8 @@ Type 'q()' to quit R.
 > 
 > 
 > 
-> cleanEx(); nameEx("batchSOM")
+> cleanEx()
+> nameEx("batchSOM")
 > ### * batchSOM
 > 
 > flush(stderr()); flush(stdout())
@@ -148,7 +84,8 @@ Type 'q()' to quit R.
 > 
 > 
 > 
-> cleanEx(); nameEx("condense")
+> cleanEx()
+> nameEx("condense")
 > ### * condense
 > 
 > flush(stderr()); flush(stdout())
@@ -188,7 +125,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("knn")
+> cleanEx()
+> nameEx("knn")
 > ### * knn
 > 
 > flush(stderr()); flush(stdout())
@@ -242,7 +180,8 @@ $prob
 > 
 > 
 > 
-> cleanEx(); nameEx("knn.cv")
+> cleanEx()
+> nameEx("knn.cv")
 > ### * knn.cv
 > 
 > flush(stderr()); flush(stdout())
@@ -320,7 +259,8 @@ $prob
 > 
 > 
 > 
-> cleanEx(); nameEx("knn1")
+> cleanEx()
+> nameEx("knn1")
 > ### * knn1
 > 
 > flush(stderr()); flush(stdout())
@@ -342,7 +282,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("lvq1")
+> cleanEx()
+> nameEx("lvq1")
 > ### * lvq1
 > 
 > flush(stderr()); flush(stdout())
@@ -375,7 +316,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("lvq2")
+> cleanEx()
+> nameEx("lvq2")
 > ### * lvq2
 > 
 > flush(stderr()); flush(stdout())
@@ -408,7 +350,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("lvq3")
+> cleanEx()
+> nameEx("lvq3")
 > ### * lvq3
 > 
 > flush(stderr()); flush(stdout())
@@ -441,7 +384,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("lvqinit")
+> cleanEx()
+> nameEx("lvqinit")
 > ### * lvqinit
 > 
 > flush(stderr()); flush(stdout())
@@ -469,7 +413,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("lvqtest")
+> cleanEx()
+> nameEx("lvqtest")
 > ### * lvqtest
 > 
 > flush(stderr()); flush(stdout())
@@ -488,7 +433,8 @@ knn1(codebk$x, test, codebk$cl)
 > 
 > 
 > 
-> cleanEx(); nameEx("multiedit")
+> cleanEx()
+> nameEx("multiedit")
 > ### * multiedit
 > 
 > flush(stderr()); flush(stdout())
@@ -549,7 +495,8 @@ cl   s  c  v
 > 
 > 
 > 
-> cleanEx(); nameEx("olvq1")
+> cleanEx()
+> nameEx("olvq1")
 > ### * olvq1
 > 
 > flush(stderr()); flush(stdout())
@@ -577,7 +524,8 @@ Levels: c s v
 > 
 > 
 > 
-> cleanEx(); nameEx("reduce.nn")
+> cleanEx()
+> nameEx("reduce.nn")
 > ### * reduce.nn
 > 
 > flush(stderr()); flush(stdout())
@@ -620,7 +568,7 @@ Levels: c s v
 > ### * <FOOTER>
 > ###
 > cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.543 0.047 0.599 0 0 
+Time elapsed:  0.285 0.016 0.302 0 0 
 > grDevices::dev.off()
 null device 
           1 

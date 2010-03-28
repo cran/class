@@ -32,7 +32,7 @@ number of null passes before quitting.
 logical for statistics at each pass.
 }}
 \value{
-index vector of cases to be retained.
+Index vector of cases to be retained.
 }
 \references{
 P. A. Devijver and J. Kittler (1982)

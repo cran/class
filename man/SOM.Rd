@@ -37,7 +37,7 @@ the initial representatives.  If missing, chosen (without replacement)
 randomly from \code{data}.
 }}
 \value{
-an object of class \code{"SOM"} with components
+An object of class \code{"SOM"} with components
 
 \item{grid}{
 the grid, an object of class \code{"somgrid"}.

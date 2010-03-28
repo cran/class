@@ -20,10 +20,10 @@ codebook object returned by other LVQ software
 matrix of test examples
 }}
 \value{
-factor of classification for each row of \code{x}
+Factor of classification for each row of \code{x}
 }
 \details{
-uses 1-NN to classify each test example against the codebook.
+Uses 1-NN to classify each test example against the codebook.
 }
 \references{
   Ripley, B. D. (1996)

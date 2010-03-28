@@ -27,7 +27,7 @@ as a row vector for a single case.
 factor of true classification of training set.
 }}
 \value{
-factor of classifications of test set.
+Factor of classifications of test set.
 }
 \references{
   Ripley, B. D. (1996)

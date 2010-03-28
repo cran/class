@@ -30,7 +30,7 @@ batchSOM(data, grid = somgrid(), radii, init)
   }
 }
 \value{
-  an object of class \code{"SOM"} with components
+  An object of class \code{"SOM"} with components
   \item{grid}{the grid, an object of class \code{"somgrid"}.}
   \item{codes}{a matrix of representatives.}
 }

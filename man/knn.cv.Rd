@@ -45,7 +45,7 @@ majority vote, with ties broken at random. If there are ties for the
 \code{k}th nearest vector, all candidates are included in the vote.
 }
 \value{
-factor of classifications of training set. \code{doubt} will be returned as \code{NA}.
+Factor of classifications of training set. \code{doubt} will be returned as \code{NA}.
 }
 \references{
   Ripley, B. D. (1996)

@@ -28,7 +28,7 @@ Any which when dropped do not cause any members of the training set to
 be wrongly classified are dropped.
 }
 \value{
-index vector of cases to be retained.
+Index vector of cases to be retained.
 }
 \references{
 Gates, G.W. (1972) The reduced nearest neighbor rule.
@@ -42,7 +42,7 @@ Gates, G.W. (1972) The reduced nearest neighbor rule.
   \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
 }
 \seealso{
-\code{\link{condense}}, \code{\link{multiedit}}
+\eqn{\link{condense}}, \code{\link{multiedit}}
 }
 \examples{
 train <- rbind(iris3[1:25,,1], iris3[1:25,,2], iris3[1:25,,3])
