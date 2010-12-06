@@ -63,7 +63,7 @@ plot.SOM <- function(x, ...)
     MASS::eqscplot(c(0, x$grid$xdim+(x$grid$topo == "hexagonal") + 1),
                    c(x$grid$ydim + 1, 0),
                    axes = FALSE, type = "n", xlab = "", ylab = "", ...)
-    stars(x$codes, location = x$grid$pts, labels = NULL, len = 0.5)
+    stars(x$codes, locations = x$grid$pts, labels = NULL, len = 0.5)
     invisible()
 }
 
