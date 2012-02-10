@@ -1,7 +1,8 @@
 
-R version 2.10.0 Patched (2009-11-23 r50545)
-Copyright (C) 2009 The R Foundation for Statistical Computing
+R Under development (unstable) (2013-02-09 r61878) -- "Unsuffered Consequences"
+Copyright (C) 2013 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
+Platform: x86_64-apple-darwin12.2.0/x86_64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -22,7 +23,7 @@ Type 'q()' to quit R.
 > options(warn = 1)
 > library('class')
 > 
-> assign(".oldSearch", search(), pos = 'CheckExEnv')
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
 > cleanEx()
 > nameEx("SOM")
 > ### * SOM
@@ -457,20 +458,20 @@ cl   s  c  v
   c  0 23  2
   v  0  1 24
 > ind1 <- multiedit(train, cl, 3)
-pass  1  size  70
-pass  2  size  67
-pass  3  size  65
-pass  4  size  62
-pass  5  size  61
-pass  6  size  61
-pass  7  size  59
-pass  8  size  59
-pass  9  size  59
-pass  10  size  58
-pass  11  size  58
-pass  12  size  58
-pass  13  size  58
-pass  14  size  58
+pass 1 size 70
+pass 2 size 67
+pass 3 size 65
+pass 4 size 62
+pass 5 size 61
+pass 6 size 61
+pass 7 size 59
+pass 8 size 59
+pass 9 size 59
+pass 10 size 58
+pass 11 size 58
+pass 12 size 58
+pass 13 size 58
+pass 14 size 58
 > length(ind1)
 [1] 58
 > table(cl, knn(train[ind1, , drop=FALSE], test, cl[ind1], 1))
@@ -567,8 +568,8 @@ Levels: c s v
 > 
 > ### * <FOOTER>
 > ###
-> cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.285 0.016 0.302 0 0 
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.455 0.025 0.485 0 0 
 > grDevices::dev.off()
 null device 
           1 
