@@ -42,7 +42,7 @@ Gates, G.W. (1972) The reduced nearest neighbor rule.
   \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
 }
 \seealso{
-\eqn{\link{condense}}, \code{\link{multiedit}}
+  \code{\link{condense}}, \code{\link{multiedit}}
 }
 \examples{
 train <- rbind(iris3[1:25,,1], iris3[1:25,,2], iris3[1:25,,3])
