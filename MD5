@@ -1,4 +1,4 @@
-fb3bf5b0195fbe9b98a9280872ece454 *DESCRIPTION
+a2458bf8d86b669a7656fc5ace1bbefa *DESCRIPTION
 5eebfdd24e8b4bbc1a0e6fbda79d194d *LICENCE.note
 a92febb02a17971969afc1e4e4067279 *NAMESPACE
 44e5755ae2d5d1f1b8509879577c17a5 *R/SOM.R
@@ -9,7 +9,7 @@ acd705e760928c76dc5507dc598872e1 *R/multiedit.R
 3bad31311a37fe2f39e9c2ad876ab94c *inst/CITATION
 e042788d6870b70eb8ea0bc5f01391ff *inst/NEWS
 2d4884f2f724beae0767bf44efa59598 *inst/po/de/LC_MESSAGES/R-class.mo
-677b90f7ab673c399567292cf2f3f782 *inst/po/en@quot/LC_MESSAGES/R-class.mo
+53216579bd1b93c6f8e4653cf7d6fb7c *inst/po/en@quot/LC_MESSAGES/R-class.mo
 d10745a6ccb433aeeb6ed691dfdf8918 *inst/po/fr/LC_MESSAGES/R-class.mo
 3c13e6d55396b92fd24b58b756b03ac4 *inst/po/ko/LC_MESSAGES/R-class.mo
 e2a420dc42a1b708f25f73dbb89a8abb *inst/po/pl/LC_MESSAGES/R-class.mo
@@ -28,9 +28,9 @@ e8e077536af8608b6d5d366410bae87a *man/lvqtest.Rd
 11a66b273c6dc182cc05bb2bc53fdb54 *man/olvq1.Rd
 401fc2d0327911732fd84ccd817e41e5 *man/reduce.nn.Rd
 04d8b8fb49626fa41093f3b19ce5edbf *man/somgrid.Rd
-b429d312008b1093f1f768506a25e686 *po/R-class.pot
+d6d57866d0b39bb128abce9b8ba920a3 *po/R-class.pot
 98593b35ec7a47e8442acbbe9feb6846 *po/R-de.po
 3195cdd61375917b1dec4d2521cc5ea8 *po/R-fr.po
 161dc97e9c24260b24b9304c3f69d642 *po/R-ko.po
 4fcc24f341019a4f3101815fd34f960c *po/R-pl.po
-045e79c0d1da224a2e90b92418afb89f *src/class.c
+e74edc8ed027013f6d6b838eab7d0bc3 *src/class.c

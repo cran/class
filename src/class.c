@@ -1,5 +1,5 @@
 /*
- *  class/src/class.c by W. N. Venables and B. D. Ripley  Copyright (C) 1994-2002
+ *  class/src/class.c by W. N. Venables and B. D. Ripley  Copyright (C) 1994-2018
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,6 +16,7 @@
  *
  */
 
+#include <stdlib.h> // currently in R.h
 #include <R.h>
 #include <math.h>
 #include <float.h>
@@ -394,7 +395,9 @@ VR_onlineSOM(double *data, double *codes, double *nhbrdist,
 	/* pick a random data point */
 	i = (int)(n * UNIF);
 	/* find the nearest code 'near' */
-	nind = 0; dm = DOUBLE_XMAX;
+	/* nind is the number of tied minima,  unlike VR_knn1 */
+	nind = 1; // for compilers: set to 1 when first min found.
+	dm = DOUBLE_XMAX;
 	for (cd = 0; cd < ncodes; cd++) {
 	    dist = 0.0;
 	    for (j = 0; j < p; j++) {
@@ -403,7 +406,7 @@ VR_onlineSOM(double *data, double *codes, double *nhbrdist,
 	    }
 	    if (dist <= dm * (1 + EPS)) {
 		if (dist < dm * (1 - EPS)) {
-		    nind = 0;
+		    nind = 1;
 		    nearest = cd;
 		} else {
 		    if(++nind * UNIF < 1.0) nearest = cd;
@@ -435,12 +438,9 @@ static const R_CMethodDef CEntries[] = {
     {NULL, NULL, 0}
 };
 
-#include <Rversion.h>
 void R_init_class(DllInfo *dll)
 {
     R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
-#if defined(R_VERSION) && R_VERSION >= R_Version(2, 16, 0)
     R_forceSymbols(dll, TRUE);
-#endif
 }
