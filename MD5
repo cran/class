@@ -1,5 +1,5 @@
-a2458bf8d86b669a7656fc5ace1bbefa *DESCRIPTION
-5eebfdd24e8b4bbc1a0e6fbda79d194d *LICENCE.note
+538b0d40093ff695b90635c8a319191b *DESCRIPTION
+8d88c23f9287bce276807c315b860d16 *LICENCE.note
 a92febb02a17971969afc1e4e4067279 *NAMESPACE
 44e5755ae2d5d1f1b8509879577c17a5 *R/SOM.R
 6985c529cd8fc96dc6c91af6cc9cc964 *R/knn.R
@@ -9,8 +9,9 @@ acd705e760928c76dc5507dc598872e1 *R/multiedit.R
 3bad31311a37fe2f39e9c2ad876ab94c *inst/CITATION
 e042788d6870b70eb8ea0bc5f01391ff *inst/NEWS
 2d4884f2f724beae0767bf44efa59598 *inst/po/de/LC_MESSAGES/R-class.mo
-53216579bd1b93c6f8e4653cf7d6fb7c *inst/po/en@quot/LC_MESSAGES/R-class.mo
+7aa1ecb4189b3be4c05189083f2bb682 *inst/po/en@quot/LC_MESSAGES/R-class.mo
 d10745a6ccb433aeeb6ed691dfdf8918 *inst/po/fr/LC_MESSAGES/R-class.mo
+c7a4e343c7796345246c4f5ea86b82a5 *inst/po/it/LC_MESSAGES/R-class.mo
 3c13e6d55396b92fd24b58b756b03ac4 *inst/po/ko/LC_MESSAGES/R-class.mo
 e2a420dc42a1b708f25f73dbb89a8abb *inst/po/pl/LC_MESSAGES/R-class.mo
 4088862ce7d73759a8a754d490575c55 *man/SOM.Rd
@@ -28,9 +29,10 @@ e8e077536af8608b6d5d366410bae87a *man/lvqtest.Rd
 11a66b273c6dc182cc05bb2bc53fdb54 *man/olvq1.Rd
 401fc2d0327911732fd84ccd817e41e5 *man/reduce.nn.Rd
 04d8b8fb49626fa41093f3b19ce5edbf *man/somgrid.Rd
-d6d57866d0b39bb128abce9b8ba920a3 *po/R-class.pot
+2122b52d4b8cf49614a11b0ca36cd4d7 *po/R-class.pot
 98593b35ec7a47e8442acbbe9feb6846 *po/R-de.po
 3195cdd61375917b1dec4d2521cc5ea8 *po/R-fr.po
+492fd736f45313a71f7ab3b491fda0a0 *po/R-it.po
 161dc97e9c24260b24b9304c3f69d642 *po/R-ko.po
 4fcc24f341019a4f3101815fd34f960c *po/R-pl.po
 e74edc8ed027013f6d6b838eab7d0bc3 *src/class.c
