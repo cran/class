@@ -1,4 +1,4 @@
-cb6f28fb535436ad0ac1ffb8d28c0c8e *DESCRIPTION
+c85caea72c963aee6dfa23c3c0309fc0 *DESCRIPTION
 a0e96c11b4d12e246a178ca1e77f7f7e *LICENCE.note
 a92febb02a17971969afc1e4e4067279 *NAMESPACE
 44e5755ae2d5d1f1b8509879577c17a5 *R/SOM.R
@@ -35,4 +35,4 @@ b7821605b00f996cac959aaa0e3bbe72 *po/R-fr.po
 492fd736f45313a71f7ab3b491fda0a0 *po/R-it.po
 161dc97e9c24260b24b9304c3f69d642 *po/R-ko.po
 4fcc24f341019a4f3101815fd34f960c *po/R-pl.po
-e74edc8ed027013f6d6b838eab7d0bc3 *src/class.c
+afdbd484afd8f6d78a9ac578c465ed5a *src/class.c
