@@ -28,8 +28,8 @@
 #define UNIF unif_rand()
 
 void
-VR_knn1(Sint *pntr, Sint *pnte, Sint *p, double *train, Sint *class,
-	double *test, Sint *res, Sint *votes, Sint *nc, double *dists)
+VR_knn1(int *pntr, int *pnte, int *p, double *train, int *class,
+	double *test, int *res, int *votes, int *nc, double *dists)
 {
     int   npat, index, i, j, k, ntr = *pntr, nte = *pnte, nind=0, ntie, *ind;
     double dm, dist, tmp;
@@ -92,9 +92,9 @@ VR_knn1(Sint *pntr, Sint *pnte, Sint *p, double *train, Sint *class,
 
 
 void
-VR_knn(Sint *kin, Sint *lin, Sint *pntr, Sint *pnte, Sint *p,
-       double *train, Sint *class, double *test, Sint *res, double *pr,
-       Sint *votes, Sint *nc, Sint *cv, Sint *use_all)
+VR_knn(int *kin, int *lin, int *pntr, int *pnte, int *p,
+       double *train, int *class, double *test, int *res, double *pr,
+       int *votes, int *nc, int *cv, int *use_all)
 {
     int   i, index, j, k, k1, kinit = *kin, kn, l = *lin, mm, npat, ntie,
           ntr = *pntr, nte = *pnte, extras;
@@ -207,9 +207,9 @@ VR_knn(Sint *kin, Sint *lin, Sint *pntr, Sint *pnte, Sint *p,
 #define min9(a,b) ((a < b)?a:b)
 
 void
-VR_olvq(double *alpha, Sint *pn, Sint *p, double *x, Sint *cl,
-	Sint *pncodes, double *xc, Sint *clc, Sint *niter,
-	Sint *iters)
+VR_olvq(double *alpha, int *pn, int *p, double *x, int *cl,
+	int *pncodes, double *xc, int *clc, int *niter,
+	int *iters)
 {
     int   index=0, iter, j, k, n = *pn, ncodes = *pncodes, npat, s;
     double *al;
@@ -242,9 +242,9 @@ VR_olvq(double *alpha, Sint *pn, Sint *p, double *x, Sint *cl,
 }
 
 void
-VR_lvq1(double *alpha, Sint *pn, Sint *p, double *x, Sint *cl,
-	Sint *pncodes, double *xc, Sint *clc, Sint *niter,
-	Sint *iters)
+VR_lvq1(double *alpha, int *pn, int *p, double *x, int *cl,
+	int *pncodes, double *xc, int *clc, int *niter,
+	int *iters)
 {
     int   index = 0, iter, j, k, n = *pn, ncodes = *pncodes, npat, s;
     double alpha_t;
@@ -273,9 +273,9 @@ VR_lvq1(double *alpha, Sint *pn, Sint *p, double *x, Sint *cl,
 }
 
 void
-VR_lvq2(double *alpha, double *win, Sint *pn, Sint *p, double *x,
-	Sint *cl, Sint *pncodes, double *xc, Sint *clc,
-	Sint *niter, Sint *iters)
+VR_lvq2(double *alpha, double *win, int *pn, int *p, double *x,
+	int *cl, int *pncodes, double *xc, int *clc,
+	int *niter, int *iters)
 {
     int index = 0, iter, j, k, n = *pn, ncodes = *pncodes, nindex = 0,
 	npat, ntmp;
@@ -324,9 +324,9 @@ VR_lvq2(double *alpha, double *win, Sint *pn, Sint *p, double *x,
 }
 
 void
-VR_lvq3(double *alpha, double *win, double *epsilon, Sint *pn, Sint *p,
-	double *x, Sint *cl, Sint *pncodes, double *xc, Sint *clc,
-	Sint *niter, Sint *iters)
+VR_lvq3(double *alpha, double *win, double *epsilon, int *pn, int *p,
+	double *x, int *cl, int *pncodes, double *xc, int *clc,
+	int *niter, int *iters)
 {
     int index = 0, iter, j, k, n = *pn, ncodes = *pncodes, nindex = 0,
 	npat, ntmp;
@@ -383,7 +383,7 @@ VR_lvq3(double *alpha, double *win, double *epsilon, Sint *pn, Sint *p,
 void
 VR_onlineSOM(double *data, double *codes, double *nhbrdist,
 	     double *alpha, double *radii,
-	     Sint *pn, Sint *pp, Sint *pncodes, Sint *rlen)
+	     int *pn, int *pp, int *pncodes, int *rlen)
 {
     int n = *pn, p = *pp, ncodes = *pncodes;
     int i, j, k, nearest = 0 /* -Wall */, nind;
