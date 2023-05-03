@@ -78,8 +78,8 @@ plot(crabs.som)
 
 ## 2-phase training
 crabs.som2 <- SOM(lcrabs, gr,
-    alpha = list(seq(0.05, 0, len = 1e4), seq(0.02, 0, len = 1e5)),
-    radii = list(seq(8, 1, len = 1e4), seq(4, 1, len = 1e5)))
+    alpha = list(seq(0.05, 0, length.out = 1e4), seq(0.02, 0, length.out = 1e5)),
+    radii = list(seq(8, 1, length.out = 1e4), seq(4, 1, length.out = 1e5)))
 plot(crabs.som2)
 }
 \keyword{classif}

@@ -59,7 +59,7 @@ gr <- somgrid(topo = "hexagonal")
 crabs.som <- batchSOM(lcrabs, gr, c(4, 4, 2, 2, 1, 1, 1, 0, 0))
 plot(crabs.som)
 
-bins <- as.numeric(knn1(crabs.som$code, lcrabs, 0:47))
+bins <- as.numeric(knn1(crabs.som$codes, lcrabs, 0:47))
 plot(crabs.som$grid, type = "n")
 symbols(crabs.som$grid$pts[, 1], crabs.som$grid$pts[, 2],
         circles = rep(0.4, 48), inches = FALSE, add = TRUE)

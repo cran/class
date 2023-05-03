@@ -68,8 +68,8 @@ plot.SOM <- function(x, ...)
 }
 
 SOM <- function(data, grid = somgrid(), rlen = 10000,
-                alpha = seq(0.05, 0, len = rlen),
-                radii = seq(4, 1, len = rlen),
+                alpha = seq(0.05, 0, length.out = rlen),
+                radii = seq(4, 1, length.out = rlen),
                 init)
 {
     data <- as.matrix(data)
