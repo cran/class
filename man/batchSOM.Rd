@@ -1,5 +1,5 @@
 % file class/man/batchSOM.Rd
-% copyright (C) 2002 W. N. Venables and B. D. Ripley
+% copyright (C) 2002-2023 W. N. Venables and B. D. Ripley
 %
 \name{batchSOM}
 \alias{batchSOM}
